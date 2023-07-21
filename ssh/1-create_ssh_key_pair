@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# create RSA pair that has the private key called school, number of bits is 4096
+# the created ey should be protected by passphrase called betty
+ssh-keygen -f school -b 4096 -N betty
