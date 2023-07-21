@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# using your ssh configuration connect to a local ssh client without typing a password.
+# use private key ~/.ssh/school
+host *
+        IdentityFile ~/.ssh/school
+        PasswordAuthentication no
