@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Running nginx as nginx and fixing port from 80 to 8080
-pkill apache2
-sed -i 's/80/8080/g' /etc/nginx/sites-available/default
-chmod 644 /etc/nginx/nginx.conf
-sudo -u nginx service nginx restart
+# bash script that configures container
+sudo chmod -R 755 /etc/nginx/
+sudo pkill -9 apache2
+sudo sed -i 's/8080/8081/g' /etc/apache2/ports.conf
+su nginx -c "sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default"
+su nginx service nginx restartt
